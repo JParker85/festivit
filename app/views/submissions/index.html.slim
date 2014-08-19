@@ -100,23 +100,23 @@ html
                   = submission.created_at.to_date
                 .clearFloat
                 span
-                  - unless submission.facebook_link.nil?
-                    span.social
-                      = link_to  "http://#{submission.facebook_link}"
-                        i.fa.fa-facebook-square                    
-                  - unless submission.twitter_link.nil?
-                    span.social
-                      = link_to "http://#{submission.twitter_link}"
-                        i.fa.fa-twitter
-                  - unless submission.website.nil?
-                    span.social
-                      = link_to "http://#{submission.website}"
-                        i.fa.fa-globe
-                  - unless submission.participant.email.nil?
-                    span.social
-                      - if participant
-                        = mail_to participant.email
-                          i.fa.fa-envelope
+                  / - unless submission.facebook_link.nil?
+                  /   span.social
+                  /     = link_to  "http://#{submission.facebook_link}"
+                  /       i.fa.fa-facebook-square                    
+                  / - unless submission.twitter_link.nil?
+                  /   span.social
+                  /     = link_to "http://#{submission.twitter_link}"
+                  /       i.fa.fa-twitter
+                  / - unless submission.website.nil?
+                  /   span.social
+                  /     = link_to "http://#{submission.website}"
+                  /       i.fa.fa-globe
+                  / - unless submission.participant.email.nil?
+                  /   span.social
+                  /     - if participant
+                  /       = mail_to participant.email
+                  /         i.fa.fa-envelope
 
             td.tags
               - if submission.tags
